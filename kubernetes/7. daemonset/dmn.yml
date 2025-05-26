@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-dmn
+  namespace: dmn-ns
+spec:
+  selector:
+    matchLabels:
+      name: dmn-label
+  template:
+    metadata:
+      labels:
+        name: dmn-label
+    spec:
+      containers:
+        - name: dmn-container
+          image: nginx
+          ports:
+            - containerPort: 80
