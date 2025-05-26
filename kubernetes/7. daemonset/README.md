@@ -1,4 +1,4 @@
-# Kubernetes DaemonSet Examplee
+# Kubernetes DaemonSet Example
 
 This project demonstrates how to create and use a **DaemonSet** in Kubernetes to deploy a pod on every node in the cluster.
 
