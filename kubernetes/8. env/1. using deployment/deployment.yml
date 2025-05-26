@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-label
+  template:
+    metadata:
+      labels:
+        app: my-label
+    spec:
+      containers:
+        - name: env-container
+          image: nginx:1.14.2
+          env:
+            - name: APP_ENV
+              value: "prod"
+            - name: DB_HOST
+              value: "db.example.com"
+            - name: DB_PORT
+              value: "5432"
+          ports:
+            - containerPort: 80
