@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env-config-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-env-config-label
+  template:
+    metadata:
+      labels:
+        app: my-env-config-label
+    spec:
+      containers:
+        - name: env-config-container
+          image: nginx:1.14.2
+          envFrom:
+            - configMapRef:
+                name: my-config
