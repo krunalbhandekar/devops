@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: local-storage-pod
+spec:
+  containers:
+    - name: app
+      image: nginx
+      volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: storage
+  volumes:
+    - name: storage
+      persistentVolumeClaim:
+        claimName: local-pvc
