@@ -149,7 +149,7 @@ kubectl get endpoints service
 kubectl get svc
 ```
 
-Above command will give **Service Port (between 30000 to 30800)**
+Above command will give **Service Port (between 30000 to 32768)**
 🔐 Allow **Service Port** in **AWS EC2 Security Group**
 
 ```bash
