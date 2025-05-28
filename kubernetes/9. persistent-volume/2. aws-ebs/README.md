@@ -20,7 +20,7 @@ Make sure the following all exist in the **same Availability Zone**:
 
 ## 🎥 1. Watch Video
 
-👉 **[Watch the Setup Video]()**
+👉 **[Watch the Setup Video](https://drive.google.com/drive/folders/1PCjcOdqdNIpcwyYfspk5UZpMhA5FR1Tx?usp=sharing)**
 
 Watch the video tutorial to learn how to:
 
