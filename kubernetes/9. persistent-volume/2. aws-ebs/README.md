@@ -55,7 +55,7 @@ spec:
 Apply the manifest:
 
 ```bash
-kubectl apply -f pv.yaml
+kubectl apply -f pv.yml
 ```
 
 ---
@@ -79,7 +79,7 @@ spec:
 Apply the manifest:
 
 ```bash
-kubectl apply -f pvc.yaml
+kubectl apply -f pvc.yml
 ```
 
 ---
@@ -107,7 +107,7 @@ spec:
 Apply the manifest:
 
 ```bash
-kubectl apply -f pv.yaml
+kubectl apply -f pod.yml
 ```
 
 ---
