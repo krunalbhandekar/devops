@@ -6,8 +6,8 @@ This guide explains how to securely inject sensitive data (like passwords or API
 
 ## 📁 Files Included
 
-- `secret.yaml`: Defines the Kubernetes Secret with base64-encoded values.
-- `deployment.yaml`: A sample Deployment that uses the secret as environment variables.
+- `secret.yml`: Defines the Kubernetes Secret with base64-encoded values.
+- `deployment.yml`: A sample Deployment that uses the secret as environment variables.
 
 ---
 
@@ -15,10 +15,10 @@ This guide explains how to securely inject sensitive data (like passwords or API
 
 ### 1. Create the Kubernetes Secret
 
-Use `secret.yaml` to define the secret data (make sure values are base64-encoded):
+Use `secret.yml` to define the secret data (make sure values are base64-encoded):
 
 ```bash
-# secret.yaml
+# secret.yml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -40,15 +40,15 @@ echo -n 'password123' | base64
 Apply the secret:
 
 ```bash
-kubectl apply -f secret.yaml
+kubectl apply -f secret.yml
 ```
 
 ### 2. Create Deployment that Uses the Secret
 
-Define a deployment in `deployment.yaml` that consumes the secret:
+Define a deployment in `deployment.yml` that consumes the secret:
 
 ```bash
-# deployment.yaml
+# deployment.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -82,7 +82,7 @@ spec:
 Apply the deployment:
 
 ```bash
-kubectl apply -f deployment.yaml
+kubectl apply -f deployment.yml
 ```
 
 ### 3. Verify the Secrets Inside the Pod
