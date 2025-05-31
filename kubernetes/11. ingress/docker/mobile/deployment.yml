@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobile-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mobile
+  template:
+    metadata:
+      labels:
+        app: mobile
+    spec:
+      containers:
+        - name: mobile
+          image: <your_dockerhub_username>/my-mobile
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mobile-service
+spec:
+  selector:
+    app: mobile
+  ports:
+    - port: 80
+      targetPort: 80
