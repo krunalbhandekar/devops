@@ -174,8 +174,8 @@ You'll see an address like:
 
 Open in browser:
 
-- http://<ELB-DNS>/home.html
-- http://<ELB-DNS>/mobile.html
+- http://ELB-DNS/home.html
+- http://ELB-DNS/mobile.html
 
 Example:
 
