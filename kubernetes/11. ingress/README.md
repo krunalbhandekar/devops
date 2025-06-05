@@ -92,7 +92,7 @@ docker tag my-home <your-dockerhub-username>/my-home
 docker push <your-dockerhub-username>/my-home
 ```
 
-- **📱 Mobile Page**
+**📱 Mobile Page**
 
 ```bash
 cd
@@ -174,13 +174,17 @@ You'll see an address like:
 
 Open in browser:
 
-- http://<elb-address>/home.html
-- http://<elb-address>/mobile.html
+```bash
+http://<ELB-ADDRESS>/home
+#eg.
+http://a29f77032a45848e7afa19969c6057e8-23cb952f5dcd1f7e.elb.ap-south-1.amazonaws.com/home.html
+```
 
-Example:
-
-- http://a29f77032a45848e7afa19969c6057e8-23cb952f5dcd1f7e.elb.ap-south-1.amazonaws.com/home.html
-- http://a29f77032a45848e7afa19969c6057e8-23cb952f5dcd1f7e.elb.ap-south-1.amazonaws.com/mobile.html
+```bash
+http://<ELB-ADDRESS>/mobile
+#eg.
+http://a29f77032a45848e7afa19969c6057e8-23cb952f5dcd1f7e.elb.ap-south-1.amazonaws.com/mobile.html
+```
 
 ---
 
