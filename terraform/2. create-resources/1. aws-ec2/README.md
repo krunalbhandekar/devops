@@ -42,7 +42,7 @@ This stores your credentials in `~/.aws/credentials`.
 
 ### 📜 `ec2.tf` Example
 
-```bash
+```hcl
 provider "aws" {
   region = "ap-south-1"  # Change to your preferred region
 }
