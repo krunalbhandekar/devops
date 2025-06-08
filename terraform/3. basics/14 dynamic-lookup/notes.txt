@@ -1,0 +1,30 @@
+Find user age dynamically using lookup function
+
+- 1. Default Value
+    - apply
+        terraform plan
+    - enter user name
+        var.username
+            Enter a value: <enter-username-here>
+    - result
+        Changes to Outputs:
+             + print-user-age = "my name is krunal and my age is 20"
+
+- 2. Pass Username through CLI
+    - apply
+        terraform plan -var "username=pratik"
+    - result
+        Changes to Outputs:
+             + print-user-age = "my name is pratik and my age is 25"
+
+- 3. Pass Users through CLI
+    - apply
+        terraform plan -var "usersAge={user1=1, user2=2, user3=3}"
+    - enter user name
+        var.username
+            Enter a value: user2
+    - result
+        Changes to Outputs:
+             + print-user-age = "my name is user2 and my age is 2"
+
+

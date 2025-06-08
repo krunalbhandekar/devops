@@ -1,0 +1,10 @@
+Find user age through lookup function
+
+- 1. 
+    - apply
+        terraform plan
+    - result
+        Changes to Outputs:
+            + print-user-age = "my name is krunal and my age is 20"
+
+
