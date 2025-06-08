@@ -1,0 +1,15 @@
+- 1. Just try
+    hit following commands
+        - echo $name  
+        - export name=krunal
+        - echo $name ------ it will print krunal
+
+        * now try to hit terraform plan, still they are asking for **enter a value**
+        * means terraform not able to read our variable (name)
+
+- 2. Read Variable from CLI
+    hit following commands 
+        - export TF_VAR_name="Krunal Bhandekar"
+        - terraform plan
+
+        ** now terraform can read our variable from CLI
