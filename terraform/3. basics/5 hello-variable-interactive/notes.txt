@@ -1,0 +1,16 @@
+dir - devops/terraform/3. basics/5 hello-variable
+apply - terraform plan
+result - it will ask a value for variable (first-variable-name) and then print
+
+eg:
+    step 1 - terraform plan
+    step 2 - they are asking for enter value like   
+                $ terraform plan
+                var.first-variable-name
+                    Enter a value:  <write-value-here, eg: Krunal>
+    step 3 - Result like this
+                Changes to Outputs:
+                + printName = "Krunal"
+
+***extra - check how to accept output in a string format
+            + printName-in-string-format = "Check, Krunal"

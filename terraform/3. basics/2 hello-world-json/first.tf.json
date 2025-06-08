@@ -1,0 +1,10 @@
+{
+    "output":{
+        "hello1":{
+            "value":"Krunal, Hello World"
+        }
+    }
+}
+
+// Command
+// 1. terraform plan

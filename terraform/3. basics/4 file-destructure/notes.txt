@@ -1,0 +1,9 @@
+dir - devops/terraform/3. basics/4 file-destructure
+apply -  terraform plan
+result - you can see both file output
+    eg: 
+        Changes to Outputs:
+            + first-output  = "first-file-destructure"
+            + second-output = "second-file-destructure"
+
+**** output sequence or file load/apply sequence: it will perform alphabetical order (file name)

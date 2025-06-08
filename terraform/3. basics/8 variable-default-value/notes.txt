@@ -1,0 +1,16 @@
+This will show how we can set the default value of variable
+
+- 1. if we not pass any value then it will print default value
+    apply - terraform plan
+    check - 
+                Changes to Outputs:
+                    + Print-Output = "Learn Devops"
+
+- 2. if we pass new value then it will print new value
+    apply - terraform plan -var "first-variable-name=Krunal Bhandekar"
+    check - 
+                Changes to Outputs:
+                    + Print-Output = "Krunal Bhandekar"
+
+- 3. apply for multiple variable
+    apply - terraform plan -var "first-variable-name=Krunal Bhandekar" -var "second-variable-name=Devops Learner" 

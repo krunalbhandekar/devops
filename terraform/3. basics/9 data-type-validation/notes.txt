@@ -1,0 +1,22 @@
+This will show how we can validate data type 
+
+* if we not pass any type then default type will be *string*
+
+- 1. 
+    apply - terraform plan -var "your-name=Krunal Bhandekar" -var "your-age=Bhandekar"
+    *** it will throw an error like
+
+            │ Error: Invalid value for input variable
+│
+│               on variable.tf line 6:
+│               6: variable "your-age" {
+│
+│ Unsuitable value for var.your-age set using -var="your-age=...": a number is required.
+
+- 2 
+    apply - terraform plan -var "your-name=Krunal Bhandekar" -var "your-age=28"
+    *** it will print result
+
+        Changes to Outputs:
+            + Print-Output-1 = "Krunal Bhandekar"
+            + Print-Output-2 = 28

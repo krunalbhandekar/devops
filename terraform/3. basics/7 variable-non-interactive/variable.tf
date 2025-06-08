@@ -1,0 +1,1 @@
+variable "first-variable-name" {}

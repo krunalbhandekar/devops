@@ -1,0 +1,3 @@
+This will show how we can perform or get output in a non interactive mode, means we can pass variable value while applying the command itself
+
+apply - terraform plan -var "first-variable-name=Krunal"
