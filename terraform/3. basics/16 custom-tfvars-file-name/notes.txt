@@ -1,0 +1,4 @@
+In this directory i have 2 tfvars files like dev.tfvars and terraform.tfvars
+
+- 1. if we just hit **terraform plan**, it will take variable from **terraform.tfvars** file and
+- 2. if we apply **terraform plan -var-file=dev.tfvars**, then it will take variable from **dev.tfvars** file 

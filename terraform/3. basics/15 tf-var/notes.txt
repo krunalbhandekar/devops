@@ -1,0 +1,12 @@
+What we do initially is
+
+    - terraform plan, then enter name and age
+    - or terraform plan -var "age=27" -var "name=KB"
+
+but if there are number of users, so we can use terraform.tfvars
+-----------------------------------------------------------------------
+
+**Using terraform.tfvars**
+
+we can define variables value in terraform.tfvars file
+
