@@ -1,0 +1,12 @@
+provider "github" {
+  token = "<write-your-github-token-here>"
+}
+
+
+
+resource "github_repository" "terraform-repo" {
+  name        = "first-repo-using-terraform"
+  description = "My First repo using Terraform"
+  visibility  = "public"
+  auto_init   = true
+}
