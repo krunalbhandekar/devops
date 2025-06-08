@@ -1,0 +1,28 @@
+it will showcase how we can use function in terraform
+
+- **join** i am using *join* function, it just act as a javascript join
+    - it will accept 2 parameters
+        - first is separator like (",")
+        - second is list
+
+    - apply 
+        terraform plan 
+    - result 
+        Changes to Outputs:
+            + printUsers = "kRuNal,pratik,ankit"
+-------------------------------------------------------------------
+
+- **upper** it will make all alphabet of user name in uppercase
+    - apply 
+        terraform plan 
+    - result 
+        Changes to Outputs:
+            + print-in-first-user-UpparCase = "KRUNAL"
+-------------------------------------------------------------------
+
+- **lower** it will make all alphabet of user name in lowercase
+    - apply 
+        terraform plan 
+    - result 
+        Changes to Outputs:
+            + print-in-first-user-LowerCase = "krunal"

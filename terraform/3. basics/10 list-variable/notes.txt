@@ -1,0 +1,16 @@
+It will showcase how we can print first (or any index) user from the list
+
+- 1. apply 
+    terraform plan
+
+- 2. enter user list
+    var.users
+         Enter a value: ["Krunal", "Pratik","Gaurav"] 
+
+- 3. see the first user name
+    Changes to Outputs:
+        + printUsers = "First User is Krunal"
+
+*** you can try for any user/index by changing the index in variable.tf file
+        value = "First User is ${var.users[0]}" ...  here instead of 0 you can any number (number should be <= to your user list length)
+

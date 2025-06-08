@@ -1,0 +1,10 @@
+It will showcase, how we can pass user list through cli itself
+
+- 1. apply
+    terraform plan -var 'users=["user1","user2","user3"]'
+        or
+    terraform plan 
+
+- 2. result
+    Changes to Outputs:
+        + printUsers = "First User is user1"
