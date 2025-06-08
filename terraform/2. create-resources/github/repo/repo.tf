@@ -10,3 +10,10 @@ resource "github_repository" "terraform-repo" {
   visibility  = "public"
   auto_init   = true
 }
+
+resource "github_repository" "terraform-repo2" {
+  name        = "second-repo-using-terraform"
+  description = "My Second repo using Terraform"
+  visibility  = "public"
+  auto_init   = true
+}
