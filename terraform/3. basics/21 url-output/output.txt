@@ -2,3 +2,4 @@
 2. terraform init
 3. terraform plan ---- it will give temporary url of your git repo
 4. terraform apply ---- it will give exact url of your git repo
+5. terraform output print-git-repo-url ---- it will give exact url of your git repo
