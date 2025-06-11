@@ -1,0 +1,4 @@
+1. update github token
+2. terraform init
+3. terraform plan ---- it will give temporary url of your git repo
+4. terraform apply ---- it will give exact url of your git repo
