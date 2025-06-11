@@ -1,0 +1,18 @@
+This will demonstrate what is the use-case and how we can use terraform refresh command
+
+1. terraform
+2. terraform plan
+3. terraform apply
+4. check your github, new repo is created with the name **first-repo-using-terraform** and description "My First repo using Terraform"
+5. change the description from github
+***6. terraform refresh
+7. terraform plan
+8. terraform apply
+9. now you can see on the github, current description has changed to old description
+10. now change the description from the terraform file
+11. terraform plan
+12. terraform apply
+13. check on github terraform file description is showing on the github
+
+
+**Conclusion: terraform always maintain their own state (declarative way)
