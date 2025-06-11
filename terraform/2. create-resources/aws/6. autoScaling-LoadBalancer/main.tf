@@ -111,6 +111,7 @@ resource "aws_launch_template" "lt_mobile" {
   user_data = base64encode(<<-EOF
     #!/bin/bash
     apt update && apt install nginx -y
+    mkdir /var/www/html/mobile
     echo "<h1>Mobile</h1>" > /var/www/html/mobile/index.html
     systemctl start nginx
     ststemctl enable nginx
