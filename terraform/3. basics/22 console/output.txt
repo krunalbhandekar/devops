@@ -1,0 +1,2 @@
+1. terraform console
+2. var.username --- you will see the output of username
