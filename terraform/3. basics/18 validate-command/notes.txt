@@ -1,0 +1,15 @@
+This (terraform validate) is used to check whether your terraform configuration files are valid or not
+
+-1. terraform init
+-2. terraform validate
+
+*** Error:
+
+    Error: Missing required argument
+│
+│   with aws_instance.ec2,
+│   on main.tf line 5, in resource "aws_instance" "ec2":
+│    5: resource "aws_instance" "ec2" {
+│
+│ "ami": one of `ami,launch_template` must be specified
+
