@@ -1,0 +1,8 @@
+This will checks if enable_versioning is true. If so, it sets, the bucket versioningstatus to "Enabled", otherwise "Suspended".
+
+- 1. terraform init
+- 2. terraform plan
+- 3. terraform apply -var="enable_versioning=true" 
+
+*** The following line uses a conditional expression
+    status = var.enable_versioning ? "Enabled" : "Suspended"
