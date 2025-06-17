@@ -2,12 +2,15 @@ This will demonstrate how we can send file (from current machine like local/ec2/
 
 Steps:
 1. touch notes.txt
+
 2. terraform init
 3. terraform plan
 4. terraform apply
+
 5. download/import the "terraform-key.pem"
 6. get the ssh access of newly created ec2 instance ( ssh -i terraform-key.pem ubuntu@<ec2-public-ip> )
+
 7. sudo -i
 8. cd /tmp
-9. ls - you can see the notes.txt file inside the newly created ec2
+9. ls - you can see the notes.txt and content.txt file inside the newly created ec2
 

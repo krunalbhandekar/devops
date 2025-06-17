@@ -27,15 +27,21 @@ resource "aws_instance" "file_provisioner" {
     Name = "check-file-provisioner"
   }
 
+  connection {
+    host        = self.public_ip
+    type        = "ssh"
+    user        = "ubuntu"
+    private_key = tls_private_key.example.private_key_pem
+  }
+
   provisioner "file" {
     source      = "${path.module}/notes.txt" # terraform/local machine path
     destination = "/tmp/notes.txt"           # remote machine path
-    connection {
-      host        = self.public_ip
-      type        = "ssh"
-      user        = "ubuntu"
-      private_key = tls_private_key.example.private_key_pem
-    }
+  }
+
+  provisioner "file" {
+    content     = "Test Content"     # custom content will store in below file
+    destination = "/tmp/content.txt" # remote machine path
   }
 }
 
