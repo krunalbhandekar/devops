@@ -1,0 +1,36 @@
+*** Each Terraform workspace have its own state file under .terraform/
+---------------------------------------------------------------------------------------------
+
+1. terraform init
+---------------------------------------------------------------------------------------------
+
+*** Basics ***
+- terraform workspace list
+- terraform workspace new <workspace-name>
+- terraform workspace select <workspace-name>
+- terraform workspace show
+- terraform workspace delete <workspace-name>
+***
+---------------------------------------------------------------------------------------------
+
+
+2. terraform workspace list  -  it will showcase all list 
+3. terraform workspace new dev  - it will create new workspace with name "dev" and switched to "dev" workspace
+4. terraform workspace new test  - it will create new workspace with name "test" and switched to "test" workspace
+---------------------------------------------------------------------------------------------
+
+### Create Resources under "dev" workspace
+
+5. terraform workspace select dev  - it will switched to "dev" workspace
+6. terraform plan 
+7. terraform apply  - it will create resources inside *dev* workspace
+---------------------------------------------------------------------------------------------
+
+### Create Resources under "test" workspace
+
+8.terraform workspace select test
+9. terraform plan 
+10. terraform apply  - it will create resources inside *test* workspace
+---------------------------------------------------------------------------------------------
+
+11. "terraform destroy" will work for current workspace only
