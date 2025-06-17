@@ -1,0 +1,13 @@
+Steps:
+
+1. Create the s3 bucket
+    a. terraform init
+    b. terraform plan
+    c. terraform apply
+
+2. Enable the backend
+    a. Uncomment the "terraform { backend "s3" ... }" block
+    b. terraform init
+    c. you will be prompted: Do you want to migrate existing state to the new backend? -> Type "yes"
+
+Conclusion: You can now keep everything in one file, and terraform will use the S3 bucket for future .tfstate storage
