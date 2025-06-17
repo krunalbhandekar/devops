@@ -1,0 +1,4 @@
+1. terraform init
+2. terraform apply
+3. the "/tmp/mypublicip.txt" file will be created inside local machine whereas "/tmp/notes.txt" file will create inside new ec2 instance (file provisioner)
+
