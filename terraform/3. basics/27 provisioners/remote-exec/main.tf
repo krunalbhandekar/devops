@@ -18,13 +18,13 @@ resource "local_file" "private_key" {
   file_permission = "0400"
 }
 
-resource "aws_instance" "local_exec_provisioner" {
+resource "aws_instance" "remote_exec_provisioner" {
   ami           = "ami-0f918f7e67a3323f0"
   instance_type = "t2.micro"
   key_name      = aws_key_pair.generated_key.key_name
 
   tags = {
-    Name = "check-local_exec-provisioner"
+    Name = "check-remote_exec-provisioner"
   }
 
   connection {
@@ -34,29 +34,18 @@ resource "aws_instance" "local_exec_provisioner" {
     private_key = tls_private_key.example.private_key_pem
   }
 
-  provisioner "local-exec" {
-    command = "echo ${self.public_ip} > /tmp/mypublicip.txt"
+  provisioner "remote-exec" {
+    inline = [
+      "sudo apt update -y",
+      "sudo apt install nginx -y",
+      "echo '<h1>Remote exec</h1>' | sudo tee /var/www/html/index.html",
+      "sudo systemctl start nginx",
+      "sudo systemctl enable nginx"
+    ]
   }
 
-  provisioner "local-exec" {
-    working_dir = "/tmp/"
-    command     = "echo ${self.public_ip} > mypublicipintmp.txt"
-  }
-
-  provisioner "local-exec" {
-    command = "env>env.txt"
-    environment = {
-      envname = "envvalue"
-    }
-  }
-
-  provisioner "local-exec" {
-    command = "echo 'at create/apply'"
-  }
-
-  provisioner "local-exec" {
-    when    = destroy # this provisioner run while destroying
-    command = "echo 'at delete'"
+  provisioner "remote-exec" {
+    script = "./script.sh"
   }
 }
 
