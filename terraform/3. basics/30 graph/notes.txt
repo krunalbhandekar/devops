@@ -1,0 +1,1 @@
+pdf - terraform graph | dot -Tpdf > graph.pdf 
