@@ -6,12 +6,12 @@ This guide explains how to create a new Jenkins job that pulls code from a Git r
 
 ## 🧰 Prerequisites
 
-- Jenkins installed and running (http://<server-public-ip>:8080)
+- Jenkins installed and running (`http://<server-public-ip>:8080`)
 - Jenkins user with necessary permissions
 - Git installed on the server:
 
 ```bash
-  sudo apt install git -y         # Ubuntu/Debian
+sudo apt install git -y         # Ubuntu/Debian
 ```
 
 ---
