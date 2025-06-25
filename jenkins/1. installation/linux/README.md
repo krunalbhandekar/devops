@@ -48,6 +48,10 @@ sudo yum install temurin-21-jdk -y
 
 Verify Java:
 
+```bash
+java -version
+```
+
 ### 4. Add Jenkins Repository
 
 ```bash
